@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    java (0.0.2)
+    rake (12.3.1)
+    wit (6.0.0)
+
+PLATFORMS
+  java
+  ruby
+
+DEPENDENCIES
+  java
+  rake
+  wit
+
+BUNDLED WITH
+   1.16.2
