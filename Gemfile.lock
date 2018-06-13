@@ -1,8 +1,41 @@
+GIT
+  remote: https://github.com/mongomapper/mongomapper.git
+  revision: 410d6dc3774c3cc4f5012e2c7ca1a1f0073df0e6
+  tag: v0.13.1
+  specs:
+    mongo_mapper (0.13.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0)
+      mongo (~> 1.8)
+      plucky (~> 0.6.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (5.2.0)
+      activesupport (= 5.2.0)
+    activesupport (5.2.0)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    bson (1.12.5)
+    bson (1.12.5-java)
+    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.0.5-java)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
     java (0.0.2)
+    minitest (5.11.3)
+    mongo (1.12.5)
+      bson (= 1.12.5)
+    plucky (0.6.6)
+      mongo (~> 1.5)
     rake (12.3.1)
+    thread_safe (0.3.6)
+    thread_safe (0.3.6-java)
+    tzinfo (1.2.5)
+      thread_safe (~> 0.1)
     wit (6.0.0)
 
 PLATFORMS
@@ -11,6 +44,8 @@ PLATFORMS
 
 DEPENDENCIES
   java
+  mongo (< 2.0)
+  mongo_mapper!
   rake
   wit
 

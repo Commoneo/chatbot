@@ -7,6 +7,8 @@ require 'wit'
 require "./sentence.rb"
 require "./joke.rb"
 require "./chat.rb"
+require 'mongo_mapper'
+		require 'mongo'
 
 class Start
 end

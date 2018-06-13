@@ -1,0 +1,13 @@
+environment: production
+app_root: /home/vmuser/share/chatbot
+log_path: /home/vmuser/share/chatbot/logs
+
+monitoring:
+   memory_limit: 500,
+   cpu_limit: 75
+
+env:
+   ruby_gc_heap_init_slots: 1100000
+   ruby_gc_heap_growth_factor: 1
+   ruby_gc_heap_growth_max_slots: 4
+   ruby_gc_malloc_limit: 83886080

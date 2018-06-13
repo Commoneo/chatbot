@@ -1,0 +1,61 @@
+app:
+   appid: c1469172-9fdc-4dfc-a905-4cf4a0b07a92
+
+   application_url: http://moose.localdev.net:4000/app
+   mail_default_domain: mg.benknowscode.com
+   oauth_key_expires: 86400
+
+   payment_gateway:
+      environment: sandbox
+      merchant_id: xxx
+      public_key: xxx
+      private_key: xxx
+      cse_key: xxx
+
+   fax:
+      domain: fax.demo.pryde.co
+
+   antivirus:
+      scan_queue_trigger_length: 20
+
+   reporting:
+      queues: 4
+      
+   imagick:
+      limit:
+         memory: 536870912
+         map: 1073741824
+
+   twilio:
+      phone_number: xxx
+      account_sid: xxx
+      auth_token: xxx
+      status_callback: https://pryde.co/api/phone/status
+      voice_callback: https://pryde.co/api/phone/voice
+   
+   lyon:
+      cache_strategy:
+         breakpoints:
+            - key: 0
+              size: 5000
+            - key: 4096
+              size: 1000
+
+stores:
+   mongo:
+      replicaset: rs0
+      seeds:
+         - rhino:27017
+         - hippo:27017
+
+      host: 127.0.0.1
+      port: 27017
+
+      database: chat
+
+   postgres:
+      default: postgres://web:dev123@rhino:5433/pryde
+      primary: postgres://web:dev123@rhino:5432/pryde
+
+   redis:
+      uri: redis://rhino:6379/
