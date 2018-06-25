@@ -13,6 +13,7 @@ class Chat
 	def initialize
 		require "mongo"
 		@@db = Mongo::Connection.new("192.168.10.203", 27017).db("chat")
+		@@db.create_collection("saves")
 		#db = Mongo::Client.new([ '192.168.10.203:27017' ], :database => 'chat')
 		#db = connect("192.168.10.203:27017/chat")
 		#mongo --username web --password dev123 --host 192.168.10.203 --port 27017
@@ -26,7 +27,11 @@ class Chat
 		cursor = things.find()
 		cursor.each { |row| 
 			if(row[type] != nil)
-				puts row[type]
+				frm = row["form"]
+				if(frm == nil)
+					frm = "N/A"
+				end
+				puts row[type] + " || Form: " + frm
 			end
 		} 
 	end
@@ -79,7 +84,9 @@ class Chat
 	def writeToFile(type, text)
 		things = @@db.collection("saves")
 		
-		things.insert(type => text)
+		frm = getForm
+		
+		things.insert(type => text, "form" => frm)
 	end
 	
 	# method for handling user input
