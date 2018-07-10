@@ -2,6 +2,110 @@ class Sentence
 	
 	@@nlg = SimpleNLG::NLG
 	
+	def responses
+		#State that you were unemployed during that time period
+		@@nlg.render{phrase(:s=>mod("State that", "you"), :v=>pre_mod("unemploy", "were"), :o=>pre_mod("that time period", "during"), :t=>"past")}
+		
+		# You must list between 7 to 10 years of employment
+		@@nlg.render{phrase(:s=>"you", :v=>mod("must", "list"), :t=>"present", :o=>pre_mod("years of employment", "between 7 to 10"))}
+		
+		# You must provide final year marksheet and degree copy
+		@@nlg.render{phrase(:s=>post_mod("you", "must provide"), :t=>"present", :o=>post_mod("final year marksheet", "and degree copy"))}
+		
+		# You must provide a copy of your degree
+		@@nlg.render{phrase(:s=>post_mod("you", "must provide"), :t=>"present", :o=>post_mod("a copy of", "your degree"))}
+		
+		# The front and back of a document such as your drivers license, social security cardd, or birth certificate
+		@@nlg.render{phrase(:s=>pre_mod("a document", "the front and back of"), :o=>post_mod("such as", "your drivers license, social security card, or birth certificate"))}
+		
+		# It is required for the I9 Form that you upload a supporting document
+		@@nlg.render{phrase(:s=>pre_mod("the I9 Form", "it is required for"), :v=>mod("that you", "upload"), :o=>"a supporting document")}
+		
+		# You should upload both the front and back of the document
+		@@nlg.render{phrase(:s=>pre_mod("should upload", "you"), :perfect=>:true, :o=>pre_mod("the document", "the front and back of"))}
+		
+		# This can be filled out by any person, related or not, that is over 18 years of age, has a valid email, and is not yourself.
+		@@nlg.render{phrase(:s=>pre_mod("can be", "this"), :v=>"filled", :t=>"past", :o=>"out by any person, related or not, that is over 18 years of age, has a valid email, and is not yourself")}
+	
+		# For direct deposit documentation, you need to provide a typed letter
+		@@nlg.render{phrase(:s=>pre_mod("direct deposit documentation, you", "for"), :v=>"need to provide", :t=>"future", :o=>"a typed letter")}
+		
+		# You must provide a typed letter so that you don't get linked to the wrong bank account
+		@@nlg.render{phrase(:s=>post_mod("you must provide", "a typed letter so that you don't get"), :v=>"linked", :t=>"past", :o=>"to the wrong bank account")}
+		
+		# Follow the instructions
+		@@nlg.render{"Follow the instructions"}
+		
+		# You are getting this form because you either work or live in this state
+		@@nlg.render{phrase(s:"you", :v=>pre_mod("recieving","are"), :o=>post_mod("this form", "because you either work or live in this state"))}
+		
+		# Per company policy, this checks to see if the individual is eligible to work in the United States
+		@@nlg.render{phrase(s:post_mod("per company policy,", "this"), :v=>mod("checks", "to see if the individual is eligible to work in"), :o=>"the United States")}
+		
+		# A picture of the green checkmark that confirms work authorization
+		@@nlg.render{phrase(:s=>"a picture of the green checkmark", :v=>mod("that", "confirms"), :o=>"work authorization")}
+		
+		# You can determine if you are eligble by completing the E-Verify Self Check
+		@@nlg.render{phrase(:s=>pre_mod("can", "you"), :v=>"determine", :o=>"if you are eligble by completing the E-Verify Self Check")}
+		
+		# You should click this when you want a paper check for payment
+		@@nlg.render{phrase(:s=>mod("you", "should"), :v=>post_mod("click", "this when you want a"), :o=>"paper check for payment")}
+		
+		# You can get direct deposit by clicking the "New EFT Account" button
+		@@nlg.render{phrase(:s=>"you", :v=>pre_mod("receive", "can"), :o=>"direct deposit by clicking the 'New EFT Account' button")}
+		
+		# The certicate holder is Commoneo and please supply our address
+		@@nlg.render{phrase(:s=>"the certicate holder", :v=>"is", :o=>post_mod("Commoneo", "and please supply our address"))}
+		
+		# As an IC you must carry insurance required by the client
+		@@nlg.render{phrase(:s=>pre_mod("IC, you must carry", "as an"), :o=>"insurance required by the client")}
+		
+		# You can upload any profile that shows that you represent yourself with
+		@@nlg.render{phrase(:s=>"you", :v=>"can upload", :o=>"any profile that you represent yourself with")}
+		
+		# You can upload from, for example, Facebook, LinkedIn, etc.
+		@@nlg.render{phrase(:s=>"you", :v=>"can upload", :o=>"from, for example, Facebook, LinkedIn, etc")}
+		
+		# The customer list helps to substantiate your validity as an IC in the case of an IRS audit
+		@@nlg.render{phrase(:s=>"the customer list",  :v=>pre_mod("to substantiate", "helps"), :o=>"your validity as an IC in the case of an IRS audit")}
+		
+		# You must supply a list of your customers
+		@@nlg.render{phrase(:s=>"you", :v=>post_mod("must", "supply"), :o=>"a list of your customers")}
+		
+		# Helps differentiate your status as an independent contractor as opposed to a W2
+		@@nlg.render{phrase(:v=>post_mod("helps", "differentiate"), :o=>"your status as an independent contractor as opposed to a W2")}
+		
+		# Listing of any equipment that you bring with you on-site during a project
+		@@nlg.render{phrase(:s=>"Listing of any equipment that you bring", :o=>"with you on-site during a project")}
+		
+		# Do you bring anything with you on-site? If so, list the items here
+		@@nlg.render{"Do you bring anything with you on-site? If so, list the items here"}
+		
+		# The code is: JPMCCW ( colored in red )
+		@@nlg.render{phrase(:s=>"the code", :v=>"is", :o=>"JPMCCW ( colored in red )")}
+		
+		# Go to applicationstation.com, use your previous username and paasword
+		@@nlg.render{"Go to applicationstation.com, use your previous username and paasword"}
+		
+		# Follow the instructions on the JPMC EJC Application Instructions
+		@@nlg.render{phrase(:s=>"Follow", :o=>"the instructions on the JPMC EJC Application Instructions")}
+		
+		# Any benefits that you are eligible for come from VSG and not from the client
+		@@nlg.render{phrase(:s=>pre_mod("benefits that you are eligible for", "any"),  :v=>"come from", :o=>"VSG and not from the client")} 
+		
+		# Input "N/A" for those fields
+		@@nlg.render{"Input 'N/A' for those fields"}
+		
+		# Scroll through this item and if your location is on it, you get benefits
+		@@nlg.render{phrase(:s=>post_mod("scroll through this ","item"), :o=>"and if you location is on it, you get benefits")}
+		
+		# Accepting coverage doesn't necessarily mean you are enrolled
+		@@nlg.render{phrase(:s=>post_mod("accepting coverage", "doesn't necessarily"), :o=>post_mod("mean you are", "enrolled"))}
+		
+		# Waiving coverage means that will not be enrolled in ACA benefits
+		@@nlg.render{phrase(:s=>post_mod("waiving coverage"), :v=>"mean", :o=>post_mod("that you will not be enrolled in", "ACA benefits"))}
+	end
+	
 	$list = [
 		# A simple string
 		@@nlg.render("mary is happy"),
@@ -124,4 +228,5 @@ class Sentence
 	def test
 		help = @@nlg.render(:s=>"I'm glad you", :v=>"like", :o=>"my joke", :tense=>:past)
 	end
+	
 end
