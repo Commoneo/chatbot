@@ -8,6 +8,7 @@ require "./sentence.rb"
 require "./joke.rb"
 require "./chat.rb"
 require "./neural.rb"
+require "./decision.rb"
 
 require 'mongo_mapper'
 		require 'mongo'
