@@ -83,8 +83,11 @@ class Decision
 		
 		buildTree()
 		
-		cl = [0,1,0,0,1]
-		classify(cl)
+		cl = [0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
+		test(cl)
+		cl = [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0]
+		test(cl)
+=begin
 		cl = [1,1,1,0,1]
 		classify(cl)
 		cl = [1,0,0,0,1]
@@ -93,8 +96,31 @@ class Decision
 		classify(cl)
 		cl = [1,1,1,1,1]
 		classify(cl)
+=end
 	end
 	
+	def test arr
+		ret = 0
+		@records.each{|rec|
+			at = rec.atts
+			
+			len = at.length
+			
+			flag = true
+			
+			len.times{|x|
+				if(at[x] != arr[x])
+					flag = false
+				end
+			}
+			if(flag)
+				ret = rec.className
+				break
+			end
+		}
+		
+		puts ret
+	end
 	
 	def buildTree
 		@root = build(@records, @attributes)
@@ -273,8 +299,15 @@ class Decision
 		}
 		
 		size = records.length
+		
 		size.times{|i|
-			frequency[records[i].className -1] +=1
+			#num = records[i].className -1
+			#frequency[num] +=1
+			#puts frequency[num]
+			
+			num = records[i].className
+			v = num-1
+			frequency[v] +=1
 		}
 		
 		maxIndex = 0
@@ -335,7 +368,7 @@ class Decision
 			
 			num = 0
 			comps.each{ |p|
-				if(num < 5)
+				if(num < 27)
 					ret = convertAttribute(p, num+1)
 					attributeArray.push(ret)
 					num +=1
@@ -345,11 +378,10 @@ class Decision
 					num = 0
 				end
 			}
-			
 			rec = Record.new(attributeArray, claname)
-			
 			@records.push(rec)
 		}
+		
 		
 		@numberAttributes.times{ |p|
 			q = p + 1
@@ -359,7 +391,8 @@ class Decision
 	
 	def convertString(label)
 		value = nil
-		
+	
+=begin	
 		if(label == "highrisk")
 			value = 1
 		elsif(label == "mediumrisk")
@@ -369,13 +402,85 @@ class Decision
 		else
 			value = 4
 		end
-		
+=end
+		if(label == "ONE")
+			value = 1
+		elsif(label == "TWO")
+			value = 2
+		elsif(label == "THREE")
+			value = 3
+		elsif(label == "FOUR")
+			value = 4
+		elsif(label == "FIVE")
+			value = 5
+		elsif(label == "SIX")
+			value = 6		
+		elsif(label == "SEVEN")
+			value = 7		
+		elsif(label == "EIGHT")
+			value = 8		
+		elsif(label == "NINE")
+			value = 9		
+		elsif(label == "TEN")
+			value = 10		
+		elsif(label == "ELEVEN")
+			value = 11		
+		elsif(label == "TWELVE")
+			value = 12		
+		elsif(label == "THIRTEEN")
+			value = 13		
+		elsif(label == "FOURTEEN")
+			value = 14		
+		elsif(label == "FIFTEEN")
+			value = 15		
+		elsif(label == "SIXTEEN")
+			value = 16		
+		elsif(label == "SEVENTEEN")
+			value = 17		
+		elsif(label == "EIGHTEEN")
+			value = 18		
+		elsif(label == "NINETEEN")
+			value = 19		
+		elsif(label == "TWENTY")
+			value = 20		
+		elsif(label == "TWENTYONE")
+			value = 21		
+		elsif(label == "TWENTYTWO")
+			value = 22		
+		elsif(label == "TWENTYTHREE")
+			value = 23		
+		elsif(label == "TWENTYFOUR")
+			value = 24		
+		elsif(label == "TWENTYFIVE")
+			value = 25		
+		elsif(label == "TWENTYSIX")
+			value = 26		
+		elsif(label == "TWENTYSEVEN")
+			value = 27		
+		elsif(label == "TWENTYEIGHT")
+			value = 28		
+		elsif(label == "TWENTYNINE")
+			value = 29		
+		elsif(label == "THIRTY")
+			value = 30		
+		elsif(label == "THIRTYONE")
+			value = 31		
+		elsif(label == "THIRTYTWO")
+			value = 32		
+		elsif(label == "THIRTYTHREE")
+			value = 33		
+		elsif(label == "THIRTYFOUR")
+			value = 34		
+		else
+			value = 0		
+		end
 		value
 	end
 	
 	def convertAttribute(label, index)
 		value = nil
-		
+
+=begin		
 		if(index == 1)
 			if(label == "highschool")
 				value = 0
@@ -406,6 +511,15 @@ class Decision
 			elsif(label == "retired")
 				value = 1			
 			end
+		end
+=end
+
+		if(label.include?"_off")
+			value = 0
+		elsif(label.include?"_on")
+			value = 1
+		else
+			value = 12
 		end
 		
 		value
