@@ -71,6 +71,12 @@ class Decision
 		self
 	end
 	
+	def go(params)
+		puts params.to_s
+		ret = test(params)
+		puts "Classify: " + ret.to_s
+	end
+	
 	def initialize
 		@root = nil
 		@records = Array.new
@@ -82,12 +88,13 @@ class Decision
 		loadTrainingData("./dtrain.txt")
 		
 		buildTree()
-		
+=begin
+		puts @records[0].atts.to_s
 		cl = [0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0]
 		test(cl)
 		cl = [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0]
 		test(cl)
-=begin
+
 		cl = [1,1,1,0,1]
 		classify(cl)
 		cl = [1,0,0,0,1]
@@ -119,7 +126,7 @@ class Decision
 			end
 		}
 		
-		puts ret
+		return ret
 	end
 	
 	def buildTree
