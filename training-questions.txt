@@ -1,0 +1,141 @@
+1 Employment History Form
+	What do i put if there is an employment gap?
+		ONE
+	How many years must i enter?
+		TWO
+	What should I do if i am unemployed for part of this time period?
+		ONE
+	I was unemployed for part of that time
+		ONE
+2 Scan of Diploma
+	I am from India
+		THREE
+	I am from the united states
+		FOUR
+	What do i put if i am from India?
+		THREE
+	What do i put if i am not from India?
+		FOUR
+	What do i put if i live in the united states?
+		FOUR
+	What do i upload?
+		FOUR
+3 I9 Supporting Documents
+	What can I upload?
+		FIVE
+	Do I have to upload a supporting document?
+		SIX
+	Which side do i have to upload?
+		SEVEN
+4 I9 Authorized Representative Form
+	Who can fill in the I9 Authorized Representative form?
+		EIGHT
+	Does the representative need a valid e-mail?
+		EIGHT
+	How old does the representative have to be?
+		EIGHT
+	Does it have to be someone unrelated?
+		EIGHT
+	Can the representative be related to me
+		EIGHT
+	Can I use myself?
+		EIGHT
+5 Direct Deposit Documentation
+	Can I provide a written letter?
+		NINE
+	Do I have to provide a typed letter?
+		NINE
+	Why do i need to provide a typed letter?
+		TEN
+6 Fieldglass User Guide
+	What needs to be done for this item?
+		ELEVEN
+7 Withholdings Form
+	Why is this form in my queue?
+		TWELVE
+8 E-Verify Self Check Instructions
+	Why does this need to be done?
+		THIRTEEN
+	What should I upload?
+		FOURTEEN
+9 Self Check Results
+	How do I know if I'm eligible?
+		FIFTEEN
+	What am I supposed to upload?
+		FOURTEEN
+	What do I put here?
+		FOURTEEN
+10 Electronic Fund Transfer Authorization
+	When should i click "Cancel EFT"?
+		SIXTEEN
+	Why would i pick "Cancel EFT"?
+		SIXTEEN
+	How do i get direct deposit?
+		SEVENTEEN
+11 Certificate of Insurance
+	Who should be the certicate holder?
+		EIGHTEEN
+	Why do i need to upload this?
+		NINETEEN
+12 Business Director Listing
+	What can i upload?
+		TWENTY
+	What if I don't advertise in the Yellowpages?
+		TWENTYONE
+	What if I don't advertise?
+		TWENTYONE
+	What am i supposed to upload?
+		TWENTY
+	Why do i need to upload this?
+		TWENTYTWO
+13 Customer List
+	Why do i need to fill this out?
+		TWENTYTWO
+	Why do you need this?
+		TWENTYTWO
+	What am i supposed to put here?
+		TWENTYTHREE
+	What is the purpose of this?
+		TWENTYTWO
+14 Equipment List
+	Why do you need this?
+		TWENTYFOUR
+	Why do i need to fill this out?
+		TWENTYFOUR
+	What do I put here?
+		TWENTYFIVE
+	What am i supposed to put here?
+		TWENTYFIVE
+	What if i don't have any equipment?
+		TWENTYSIX
+	What equipment should i put here?
+		TWENTYFIVE
+	I don't have any equipment
+		TWENTYSIX
+15 JPMC EJC Appplication Instructions
+	What is the code?
+		TWENTYSEVEN
+	How do i get the completed application?
+		TWENTYEIGHT
+	How do I log back in?
+		TWENTYEIGHT
+	What do i do here?
+		TWENTYNINE
+16 Hourly Consultant Benefits Waiver
+	What am i waiving?
+		THIRTY
+	What benefits am i waiving?
+		THIRTY
+	What am i eligble for?
+		THIRTY
+17 Employment Application
+	What if i do not have that information?
+		THIRTYONE
+18 Sick Leave Notice
+	How do i know if i get sick leave benefits?
+		THIRTYTWO
+20 ACA Benefits Election
+	What does accepting coverage mean?
+		THIRTYTHREE
+	What does waiving coverage mean?
+		THIRTYFOUR
